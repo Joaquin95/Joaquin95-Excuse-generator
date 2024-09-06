@@ -9,55 +9,34 @@ window.onload = function() {
   //write your code here
   console.log("Hello Rigo from the console!");
   document.querySelector(".btn").addEventListener("click", function() {
-    generateExcuse();
+    generateworkexcuse();
   });
 };
 
-const generateExcuse = () => {
-  let who = [
-    "My dog",
-    "The Police",
-    "Lucifer",
-    "My Fish",
-    "UPS Driver",
-    "neighbor"
+const generateworkexcuse = () => {
+  let who = ["My dog", "The Police", "The psychic said", "Aliens", "My kids"];
+  let action = [
+    "hide and seek",
+    "abducted",
+    "damaged",
+    "ate",
+    "stole",
+    "playing"
   ];
-  let action = ["wet", "pooped", "damaged", "ate", "stole", "hid"];
   let what = [
-    "My Ipad",
-    "my car",
+    "dont leave the house",
+    "my car keys",
     "my arm",
-    " in my swimming pool",
-    "my mailbox"
-  ];
-  let when = [
-    "While I was on vacation",
-    "when I was sleeping",
-    "while I was at the gym",
-    "during my coding class",
-    "when I was playing video games"
+    "got locked in the closet"
   ];
 
   let whoindex = Math.floor(Math.random() * who.length);
   let actionindex = Math.floor(Math.random() * action.length);
   let whatindex = Math.floor(Math.random() * what.length);
-  let whenindex = Math.floor(Math.random() * when.length);
 
-  console.log(
-    who[whoindex],
-    action[actionindex],
-    what[whatindex],
-    when[whenindex]
-  );
+  console.log(who[whoindex], action[actionindex], what[whatindex]);
 
   let excuse =
-    who[whoindex] +
-    " " +
-    " " +
-    action[actionindex] +
-    " " +
-    what[whatindex] +
-    " " +
-    when[whenindex];
+    who[whoindex] + " " + " " + action[actionindex] + " " + what[whatindex];
   document.querySelector(".excuse").innerHTML = excuse;
 };

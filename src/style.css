@@ -3,7 +3,12 @@
 html {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 25%;
   display: grid;
   place-items: center;
+}
+
+body {
+  background-color: lightgray;
+  background-image: url(https://picsum.photos/id/22/2000/1500);
 }
